@@ -1,0 +1,75 @@
+@use "colours" as *;
+
+$font-size-xs: max(10px, 0.9vw);
+$font-size-s: max(13px, 1.2vw);
+$font-size-m: max(16px, 1.8vw);
+$font-size-l: max(30px, 2.2vw);
+$font-size-xl: max(34px, 5vw);
+
+$transition-text-hover: all 125ms ease-in-out;
+
+$radius: 40px;
+
+@font-face {
+  font-family: "FutureSuperRegular";
+  src: url("/fonts/ABCMonumentGrotesk-Regular.woff2") format("woff2");
+  font-weight: 1 999;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FutureSuperBold";
+  src: url("/fonts/ABCMonumentGrotesk-Medium.woff2") format("woff2");
+  font-weight: 1 999;
+  font-display: swap;
+}
+
+$bold: "FutureSuperBold", sans-serif;
+$regular: "FutureSuperRegular", sans-serif;
+
+body {
+  font-family: $regular;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $bold;
+}
+
+p {
+  font-family: $regular;
+  margin-bottom: 1rem;
+  line-height: 120%;
+  font-size: $font-size-m;
+  a {
+    color: inherit;
+    transition: $transition-text-hover;
+    &:hover {
+      color: $green;
+    }
+  }
+  &.disclaimer {
+    font-size: $font-size-xs;
+  }
+  &.xs {
+    font-size: $font-size-xs;
+  }
+  &.s {
+    font-size: $font-size-s;
+  }
+  &.l {
+    font-size: $font-size-l;
+  }
+  &.xl {
+    font-size: $font-size-xl;
+  }
+}
+
+strong,
+.bold {
+  font-family: $bold;
+}
