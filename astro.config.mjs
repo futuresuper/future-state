@@ -1,8 +1,10 @@
-export default /** @type {import('astro').AstroUserConfig} */ ({
-  // Comment out "renderers: []" to enable Astro's default component support.
-  renderers: ["@astrojs/renderer-svelte"],
-  buildOptions: {
-    sitemap: false,
-    site: "https://www.impactwrap.futuresuper.com.au/",
-  },
+import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+
+import sitemap from '@astrojs/sitemap';
+
+// https://astro.build/config
+export default defineConfig({
+	site: 'https://example.com',
+	integrations: [mdx(), sitemap()],
 });
