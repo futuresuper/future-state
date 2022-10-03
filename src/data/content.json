@@ -1,16 +1,17 @@
 {
   "articles": [
     {
-      "headline": "Interesting article about Climate Change",
-      "slug": "interesting-article-about-climate-change",
-      "description": "Climate change etc things blah blah",
-      "createdAt": "2022-10-01T02:32:52.522Z",
-      "updatedAt": "2022-10-01T02:53:58.491Z",
-      "category": { "name": "Climate Change", "slug": "climate-change" },
+      "headline": "Why investing in cars isn't that bad for the planet",
+      "slug": "why-investing-in-cars-isnt-that-bad-for-the-planet",
+      "description": "We look at companies who are leading their industry on carbon intensity",
+      "createdAt": "2022-10-01T02:31:04.488Z",
+      "updatedAt": "2022-10-03T03:10:17.034Z",
+      "category": { "name": "Investing", "slug": "investing" },
+      "tags": ["cars", "environment", "climatechange"],
       "authors": [
         { "name": "Elizabeth McArthur", "slug": "elizabeth-mcarthur" }
       ],
-      "heroImage": "https://images.ctfassets.net/00iolzsxly63/7kKmFBhv01yAaFHraLiMbJ/95147af36f1ce5a5bc084c759967795d/Frame_29.png",
+      "heroImage": "https://images.ctfassets.net/00iolzsxly63/6TrI2RgQy6N1X90ahj3fpj/8a684cb223eebaef0eaac51b57ac824a/Frame_27.png",
       "content": [
         {
           "data": {},
@@ -98,9 +99,9 @@
       "slug": "the-weird-shady-world-of-carbon-credits",
       "description": "How a beef company and Rupert Murdoch’s son-in-law became climate change warriors. Or did they?",
       "createdAt": "2022-09-30T05:52:39.186Z",
-      "updatedAt": "2022-10-01T02:53:27.780Z",
+      "updatedAt": "2022-10-03T03:07:00.366Z",
       "category": { "name": "Investing", "slug": "investing" },
-      "tags": ["Climate Change", "Carbon Credits"],
+      "tags": ["climatechange", "carboncredits"],
       "authors": [
         { "name": "Elizabeth McArthur", "slug": "elizabeth-mcarthur" },
         { "name": "Simon Sheikh", "slug": "simon-sheikh" }
@@ -189,17 +190,17 @@
       ]
     },
     {
-      "headline": "Why investing in cars isn't that bad for the planet",
-      "slug": "why-investing-in-cars-isnt-that-bad-for-the-planet",
-      "description": "We look at companies who are leading their industry on carbon intensity",
-      "createdAt": "2022-10-01T02:31:04.488Z",
-      "updatedAt": "2022-10-01T02:52:33.188Z",
-      "category": { "name": "Investing", "slug": "investing" },
-      "tags": ["Cars", "Environment"],
+      "headline": "Interesting article about Climate Change",
+      "slug": "interesting-article-about-climate-change",
+      "description": "Climate change etc things blah blah",
+      "createdAt": "2022-10-01T02:32:52.522Z",
+      "updatedAt": "2022-10-03T03:06:34.466Z",
+      "category": { "name": "Climate Change", "slug": "climate-change" },
+      "tags": ["bee", "climatechange"],
       "authors": [
         { "name": "Elizabeth McArthur", "slug": "elizabeth-mcarthur" }
       ],
-      "heroImage": "https://images.ctfassets.net/00iolzsxly63/6TrI2RgQy6N1X90ahj3fpj/8a684cb223eebaef0eaac51b57ac824a/Frame_27.png",
+      "heroImage": "https://images.ctfassets.net/00iolzsxly63/7kKmFBhv01yAaFHraLiMbJ/95147af36f1ce5a5bc084c759967795d/Frame_29.png",
       "content": [
         {
           "data": {},
@@ -283,7 +284,7 @@
       ]
     }
   ],
-  "tags": ["Climate Change", "Carbon Credits", "Cars", "Environment"],
+  "tags": ["cars", "environment", "climatechange", "carboncredits", "bee"],
   "authors": [
     { "name": "Elizabeth McArthur", "slug": "elizabeth-mcarthur" },
     { "name": "Simon Sheikh", "slug": "simon-sheikh" }
