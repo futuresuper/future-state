@@ -1,38 +1,24 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-type Article = {
-  title: string;
-  slug: string;
-  description: string;
-  tags: string[];
-  category: string;
-  authors: string[];
-  heroImage: string;
-  content: any;
-};
-
-const response = await fetch(
-  "https://cdn.contentful.com/spaces/00iolzsxly63/environments/master/entries?access_token=Re5PBoem6aZcGR7O9ja4UXWqAZs4savoaacPT51avDY"
-);
-const data = await response.json();
-// console.log(data.items);
-data.items.map((i: any) => console.log(i.sys.contentType.sys.id));
+import { articles } from "../data/content.json";
+import ArticlePage from "../layouts/ArticlePage.svelte";
+import type { Article } from "../types/types";
 
 export async function getStaticPaths() {
-  return [
-    { params: { article: "carbon-credits" } },
-    { params: { article: "2" } },
-    { params: { article: "3" } },
-  ];
+  return articles.map((a) => {
+    return {
+      params: { article: a.slug },
+      props: { ...a },
+    };
+  });
 }
 
-const { article } = Astro.params;
+const article = Astro.props as Article;
 ---
 
 <BaseLayout
   title="Future State"
   description="Reporting on climate change and inequality by following the money"
 >
-  <h1>Article: {article}</h1>
+  <ArticlePage article={article} />
 </BaseLayout>

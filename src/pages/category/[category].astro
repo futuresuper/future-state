@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { categories, articles } from "../../data/content.json";
+import CategoryPage from "../../layouts/CategoryPage.svelte";
+import type { Author, Category } from "../../types/types";
+
+export async function getStaticPaths() {
+  return categories.map((c) => {
+    return {
+      params: { category: c.slug },
+      props: {
+        categoryName: c.name,
+        articlesInCategory: articles.filter(
+          (article) => article.category.slug === c.slug
+        ),
+      },
+    };
+  });
+}
+
+const { categoryName, articlesInCategory } = Astro.props;
+---
+
+<BaseLayout
+  title="Future State"
+  description="Reporting on climate change and inequality by following the money"
+>
+  <CategoryPage categoryName={categoryName} articles={articlesInCategory} />
+</BaseLayout>

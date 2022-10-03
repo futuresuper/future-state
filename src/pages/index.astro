@@ -1,10 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Home from "../layouts/Home.svelte";
+import { articles } from "../data/content.json";
+import type { Article } from "../types/types";
 ---
 
 <BaseLayout
   title="Future State"
   description="Reporting on climate change and inequality by following the money"
 >
-  <h1>Home page</h1>
+  <Home articles={articles as Article[]} />
 </BaseLayout>
