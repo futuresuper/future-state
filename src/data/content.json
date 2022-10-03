@@ -5,9 +5,9 @@
       "slug": "why-investing-in-cars-isnt-that-bad-for-the-planet",
       "description": "We look at companies who are leading their industry on carbon intensity",
       "createdAt": "2022-10-01T02:31:04.488Z",
-      "updatedAt": "2022-10-03T03:10:17.034Z",
+      "updatedAt": "2022-10-03T03:28:47.920Z",
       "category": { "name": "Investing", "slug": "investing" },
-      "tags": ["cars", "environment", "climatechange"],
+      "tags": ["cars", "environment", "climatechange", "anothertag"],
       "authors": [
         { "name": "Elizabeth McArthur", "slug": "elizabeth-mcarthur" }
       ],
@@ -284,7 +284,14 @@
       ]
     }
   ],
-  "tags": ["cars", "environment", "climatechange", "carboncredits", "bee"],
+  "tags": [
+    "cars",
+    "environment",
+    "climatechange",
+    "anothertag",
+    "carboncredits",
+    "bee"
+  ],
   "authors": [
     { "name": "Elizabeth McArthur", "slug": "elizabeth-mcarthur" },
     { "name": "Simon Sheikh", "slug": "simon-sheikh" }
