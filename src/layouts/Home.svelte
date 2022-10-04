@@ -1,4 +1,6 @@
 <script lang="ts">
+  import ArticleTeaserGrid from "../components/ArticleTeaserGrid.svelte";
+  import ArticleTeaserVertical from "../components/ArticleTeaserVertical.svelte";
   import HeroArticle from "../components/HeroArticle.svelte";
   import type { Article } from "../types/types";
 
@@ -12,7 +14,12 @@
       Reporting on climate change and inequality by following the money
     </h3>
   </div>
-  <HeroArticle article={articles[2]} />
+  <HeroArticle article={articles[0]} />
+  <ArticleTeaserGrid>
+    {#each articles.slice(0, 3) as article}
+      <ArticleTeaserVertical {article} />
+    {/each}
+  </ArticleTeaserGrid>
 </div>
 
 <style>

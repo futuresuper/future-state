@@ -6,7 +6,7 @@
 
   export let article: Article;
 
-  const { headline, description, publishDate, heroImage } = article;
+  const { headline, description, publishDate, heroImage, category } = article;
 </script>
 
 <article>
@@ -15,11 +15,13 @@
   />
   <div id="content">
     <div>
-      <ArticleDate date={publishDate} />
-      <Category />
+      <div style="margin-bottom: 20px">
+        <ArticleDate date={publishDate} />
+      </div>
+      <Category {category} />
     </div>
     <h3>{headline}</h3>
-    <h4>{description}</h4>
+    <p>{description}</p>
     <MinsToRead />
   </div>
 </article>
@@ -33,11 +35,13 @@
     height: calc(var(--image-width) * 4 / 5); /* Image aspect ratio of 5:4 */
     grid-column-gap: 30px;
     text-align: center;
+    border-bottom: 1px solid var(--black);
   }
-  h3 {
-    padding: 100px 30px;
+  p {
+    font-family: "light", serif;
   }
   #content {
+    padding: 0 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
