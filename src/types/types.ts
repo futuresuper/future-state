@@ -12,6 +12,7 @@ export type Article = {
   headline: string;
   slug: string;
   description: string;
+  publishDate: Date;
   tags: string[];
   category: Category;
   authors: Author[];

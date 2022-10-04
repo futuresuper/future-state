@@ -1,67 +1,69 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+@font-face {
+	font-family: "Regular";
+	src: url("/fonts/PPEditorialNew-Medium.woff") format("woff");
+	font-weight: 1 999;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Bold";
+	src: url("/fonts/PPEditorialNew-Ultrabold.otf") format("opentype");
+	font-weight: 1 999;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Headings";
+	src: url("/fonts/Margo.otf") format("opentype");
+	font-weight: 1 999;
+	font-display: swap;
+}
+
+html {
+	--black: #000000;
+	--white: #FAFAFA;
+}
+
 body {
-	font-family: Verdana, sans-serif;
-	margin: auto;
-	padding: 20px;
-	max-width: 65ch;
-	text-align: left;
-	background-color: #fff;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	line-height: 1.5;
-	color: #444;
+	background-color: var(--white);
+	font-family: "Regular", serif;
+	margin: 0;
+	padding: 30px;
+	font-size: max(16px, 1.8vw)
 }
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+	font-family: "Headings", serif;
+	color: var(--black);
+	font-weight: 400;
+	margin: 0;
+}
+h1 {
+	font-size: max(32px, 7vw)
+}
+h2 {
+	font-size: max(26px, 5vw)
+}
+h3 {
+	font-size: max(20px, 3.5vw)
+}
+h4 {
+	font-size: max(18px, 2vw)
+}
 strong,
 b {
-	color: #222;
+	font-family: "Bold", serif;
+	color: var(--black);
 }
 a {
-	color: #3273dc;
-}
-nav a {
-	margin-right: 10px;
-}
-textarea {
-	width: 100%;
-	font-size: 16px;
-}
-input {
-	font-size: 16px;
-}
-content {
-	line-height: 1.6;
-}
-table {
-	width: 100%;
+	color: var(--black);
+	text-decoration: underline;
 }
 img {
 	max-width: 100%;
 	height: auto;
-}
-code {
-	padding: 2px 5px;
-	background-color: #f2f2f2;
-}
-pre {
-	padding: 1rem;
-}
-pre > code {
-	all: unset;
-}
-blockquote {
-	border: 1px solid #999;
-	color: #222;
-	padding: 2px 0px 2px 20px;
-	margin: 0px;
-	font-style: italic;
 }
