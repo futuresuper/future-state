@@ -2,6 +2,7 @@
   import ArticleTeaserGrid from "../components/ArticleTeaserGrid.svelte";
   import ArticleTeaserVertical from "../components/ArticleTeaserVertical.svelte";
   import HeroArticle from "../components/HeroArticle.svelte";
+  import MailingListSignup from "../components/MailingListSignup.svelte";
   import type { Article } from "../types/types";
 
   export let articles: Article[];
@@ -20,6 +21,9 @@
       <ArticleTeaserVertical {article} />
     {/each}
   </ArticleTeaserGrid>
+  <!-- category selector: inserted via a slot as it's the only component that requires hydration -->
+  <slot />
+  <MailingListSignup />
 </div>
 
 <style>

@@ -1,8 +1,8 @@
 <script lang="ts">
   import type { Article } from "../types/types";
   import ArticleDate from "./ArticleDate.svelte";
-  import Category from "./Category.svelte";
-  import MinsToRead from "./MinsToRead.svelte";
+  import Category from "./CategoryPill.svelte";
+  import MinsToRead from "./MinsToReadPill.svelte";
 
   export let article: Article;
 

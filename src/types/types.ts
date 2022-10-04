@@ -19,3 +19,10 @@ export type Article = {
   heroImage: string;
   content: any;
 };
+
+export type Content = {
+  articles: Article[];
+  categories: Category[];
+  authors: Author[];
+  tags: string[];
+};

@@ -68,8 +68,13 @@ b {
 	color: var(--black);
 }
 a {
+	font-family: "Regular", serif;
 	color: var(--black);
 	text-decoration: underline;
+}
+button {
+	font-family: "Regular", serif;
+	color: var(--black);
 }
 img {
 	max-width: 100%;
