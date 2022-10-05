@@ -20,6 +20,8 @@ export type Article = {
   content: any;
 };
 
+export type Assets = any;
+
 export type Content = {
   articles: Article[];
   categories: Category[];

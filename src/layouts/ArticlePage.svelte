@@ -4,6 +4,7 @@
   import type { Article } from "../types/types";
 
   export let article: Article;
+  export let assets: Assets;
 
   const { headline, description, publishDate, category, heroImage, content } =
     article;
@@ -11,5 +12,5 @@
 
 <div>
   <ArticleHeader {headline} {publishDate} {category} {heroImage} />
-  <ArticleContent {content} />
+  <ArticleContent {content} {assets} />
 </div>
