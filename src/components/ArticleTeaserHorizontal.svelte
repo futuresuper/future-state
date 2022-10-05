@@ -2,28 +2,37 @@
   import type { Article } from "../types/types";
   import ArticleDate from "./ArticleDate.svelte";
   import Category from "./CategoryPill.svelte";
-  import MinsToRead from "./MinsToReadPill.svelte";
 
   export let article: Article;
 
-  const { headline, description, publishDate, heroImage, category } = article;
+  const { headline, description, publishDate, heroImage, category, slug } =
+    article;
 </script>
 
-<article>
-  <img src={heroImage} alt={headline} />
-  <div class="text">
-    <div class="col">
-      <h3>{headline}</h3>
-      <p>{description}</p>
+<div>
+  <a href="/{slug}">
+    <div>
+      <article>
+        <img src={heroImage} alt={headline} />
+        <div class="text">
+          <div class="col">
+            <h3>{headline}</h3>
+            <p>{description}</p>
+          </div>
+          <div class="col" style="align-items: flex-end;">
+            <ArticleDate date={publishDate} />
+            <Category {category} />
+          </div>
+        </div>
+      </article>
     </div>
-    <div class="col" style="align-items: flex-end;">
-      <ArticleDate date={publishDate} />
-      <Category {category} />
-    </div>
-  </div>
-</article>
+  </a>
+</div>
 
 <style>
+  a {
+    text-decoration: none;
+  }
   article {
     display: grid;
     grid-template-columns: 1fr 2fr;

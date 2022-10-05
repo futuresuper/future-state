@@ -12,7 +12,7 @@ const { articles, categories } = contentJson as Content;
   title="Future State"
   description="Reporting on climate change and inequality by following the money"
 >
-  <Home articles={articles as Article[]} categories={categories as Category[]}>
+  <Home articles={articles as Article[]}>
     <!-- Inserting this into slot from astro file so can use client:load on this component only and leave the rest fully static -->
     <CategoryArticleSection
       client:load

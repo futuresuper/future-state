@@ -6,25 +6,34 @@
 
   export let article: Article;
 
-  const { headline, description, publishDate, heroImage, category } = article;
+  const { headline, description, publishDate, heroImage, category, slug } =
+    article;
 </script>
 
-<article>
-  <div>
-    <div style="margin-bottom: 20px">
-      <ArticleDate date={publishDate} />
-    </div>
-    <div style="margin-bottom: 20px">
-      <Category {category} />
-    </div>
-    <img src={heroImage} alt={headline} />
-    <h3>{headline}</h3>
-    <p>{description}</p>
-  </div>
-  <MinsToRead />
-</article>
+<div>
+  <a href="/{slug}">
+    <article>
+      <div>
+        <div style="margin-bottom: 20px">
+          <ArticleDate date={publishDate} />
+        </div>
+        <div style="margin-bottom: 20px">
+          <Category {category} />
+        </div>
+        <img src={heroImage} alt={headline} />
+        <h3>{headline}</h3>
+        <p>{description}</p>
+      </div>
+      <MinsToRead />
+    </article>
+  </a>
+</div>
 
 <style>
+  a {
+    text-decoration: none;
+    display: block;
+  }
   article {
     text-align: center;
     display: flex;

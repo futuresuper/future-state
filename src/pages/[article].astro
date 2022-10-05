@@ -5,7 +5,7 @@ import ArticlePage from "../layouts/ArticlePage.svelte";
 import type { Article } from "../types/types";
 
 export async function getStaticPaths() {
-  return articles.map((a) => {
+  return articles.map((a: Article) => {
     return {
       params: { article: a.slug },
       props: { ...a },
@@ -17,8 +17,8 @@ const article = Astro.props as Article;
 ---
 
 <BaseLayout
-  title="Future State"
-  description="Reporting on climate change and inequality by following the money"
+  title={"Future State | " + article.headline}
+  description={article.description}
 >
   <ArticlePage article={article} />
 </BaseLayout>

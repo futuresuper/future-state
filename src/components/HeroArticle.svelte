@@ -6,27 +6,33 @@
 
   export let article: Article;
 
-  const { headline, description, publishDate, heroImage, category } = article;
+  const { headline, description, publishDate, heroImage, category, slug } =
+    article;
 </script>
 
-<article>
-  <div
-    style="width: 100%; height: 100%; background-image: url({heroImage}); background-size: cover; background-position: center"
-  />
-  <div id="content">
-    <div>
-      <div style="margin-bottom: 20px">
-        <ArticleDate date={publishDate} />
+<a href="/{slug}">
+  <article>
+    <div
+      style="width: 100%; height: 100%; background-image: url({heroImage}); background-size: cover; background-position: center"
+    />
+    <div id="content">
+      <div>
+        <div style="margin-bottom: 20px">
+          <ArticleDate date={publishDate} />
+        </div>
+        <Category {category} />
       </div>
-      <Category {category} />
+      <h3>{headline}</h3>
+      <p>{description}</p>
+      <MinsToRead />
     </div>
-    <h3>{headline}</h3>
-    <p>{description}</p>
-    <MinsToRead />
-  </div>
-</article>
+  </article>
+</a>
 
 <style>
+  a {
+    text-decoration: none;
+  }
   article {
     --image-width: calc(58vw - 90px); /* 5/12 minus grid gap and side padding */
     padding: 60px 0;
