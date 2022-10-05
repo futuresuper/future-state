@@ -1,3 +1,5 @@
+<script></script>
+
 <footer>
   <div class="logo-row">
     <div class="logo">

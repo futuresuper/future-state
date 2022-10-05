@@ -24,6 +24,8 @@
     position: relative;
     width: 100%;
     height: calc(var(--width) * 9.1 / 16);
+    padding: 60px 0;
+    border-bottom: 1px solid var(--black);
   }
   .background {
     --width: calc(100vw - 60px);

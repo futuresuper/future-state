@@ -11,6 +11,7 @@ const { articles, categories } = contentJson as Content;
 <BaseLayout
   title="Future State"
   description="Reporting on climate change and inequality by following the money"
+  hideLogo
 >
   <Home articles={articles as Article[]}>
     <!-- Inserting this into slot from astro file so can use client:load on this component only and leave the rest fully static -->
