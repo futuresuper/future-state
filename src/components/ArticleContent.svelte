@@ -5,7 +5,7 @@
   export let content: any[];
   export let assets: Assets;
 
-  console.log(assets[content[14].data.target.sys.id]);
+  // console.log(assets[content[14].data.target.sys.id]);
 </script>
 
 <div class="grid">

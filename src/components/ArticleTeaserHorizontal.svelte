@@ -9,25 +9,19 @@
     article;
 </script>
 
-<div>
-  <a href="/{slug}">
-    <div>
-      <article>
-        <img src={heroImage} alt={headline} />
-        <div class="text">
-          <div class="col">
-            <h3>{headline}</h3>
-            <p>{description}</p>
-          </div>
-          <div class="col" style="align-items: flex-end;">
-            <ArticleDate date={publishDate} />
-            <Category {category} />
-          </div>
-        </div>
-      </article>
+<a href="/{slug}">
+  <article>
+    <img src={heroImage} alt={headline} />
+    <h3>{headline}</h3>
+    <div class="category">
+      <Category {category} />
     </div>
-  </a>
-</div>
+    <p>{description}</p>
+    <div class="date">
+      <ArticleDate date={publishDate} />
+    </div>
+  </article>
+</a>
 
 <style>
   a {
@@ -35,21 +29,23 @@
   }
   article {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
     margin-bottom: 30px;
+  }
+  img {
+    grid-row: span 2;
+  }
+  .date {
+    text-align: right;
+    align-self: flex-end;
   }
   p {
     font-family: "light", serif;
+    margin-bottom: 0;
+    align-self: flex-end;
   }
-  .text {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .category {
+    justify-self: flex-end;
   }
 </style>

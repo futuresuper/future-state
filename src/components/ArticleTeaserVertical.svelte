@@ -10,24 +10,22 @@
     article;
 </script>
 
-<div>
-  <a href="/{slug}">
-    <article>
-      <div>
-        <div style="margin-bottom: 20px">
-          <ArticleDate date={publishDate} />
-        </div>
-        <div style="margin-bottom: 20px">
-          <Category {category} />
-        </div>
-        <img src={heroImage} alt={headline} />
-        <h3>{headline}</h3>
-        <p>{description}</p>
+<a href="/{slug}">
+  <article>
+    <div>
+      <div style="margin-bottom: 10px">
+        <ArticleDate date={publishDate} />
       </div>
-      <MinsToRead />
-    </article>
-  </a>
-</div>
+      <div style="margin-bottom: 30px">
+        <Category {category} />
+      </div>
+      <img src={heroImage} alt={headline} />
+      <h3>{headline}</h3>
+      <p>{description}</p>
+    </div>
+    <MinsToRead />
+  </article>
+</a>
 
 <style>
   a {
@@ -39,11 +37,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
   }
   img {
     width: 100%;
   }
+  h3 {
+    margin-top: 30px;
+  }
   p {
-    font-family: "light", serif;
+    font-family: var(--light);
   }
 </style>

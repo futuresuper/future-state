@@ -5,7 +5,8 @@
     align-self: center;
     border: 1px solid var(--black);
     border-radius: 100px;
-    padding: 10px 40px 8px 40px;
+    padding: 6px 22px 3px 22px;
     font-size: 18px;
+    margin: 0;
   }
 </style>

@@ -15,7 +15,7 @@
       Reporting on climate change and inequality by following the money
     </h3>
   </div>
-  <HeroArticle article={articles[0]} />
+  <HeroArticle article={articles[1]} />
   <ArticleTeaserGrid>
     {#each articles.slice(0, 3) as article}
       <ArticleTeaserVertical {article} />
@@ -33,10 +33,10 @@
 
   #subhead {
     text-align: center;
+    font-size: 40px;
   }
-
   .masthead {
-    padding: 20px 0 30px 0;
+    padding: 30px 0 40px 0;
     border-bottom: 1px solid var(--black);
     display: flex;
     flex-direction: column;

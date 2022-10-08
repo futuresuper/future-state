@@ -12,7 +12,9 @@
 <div class="article-header">
   <div class="background" style="background-image: url({heroImage})" />
   <div class="foreground">
-    <ArticleDate date={publishDate} white />
+    <div style="margin-bottom: 10px">
+      <ArticleDate date={publishDate} white />
+    </div>
     <CategoryPill {category} white />
     <h1>{headline}</h1>
   </div>
@@ -24,7 +26,7 @@
     position: relative;
     width: 100%;
     height: calc(var(--width) * 9.1 / 16);
-    padding: 60px 0;
+    padding: 30px 0;
     border-bottom: 1px solid var(--black);
   }
   .background {

@@ -15,10 +15,12 @@
 <style>
   button {
     border: 1px solid var(--black);
-    padding: 10px;
+    padding: 20px;
     width: 100%;
     background-color: var(--white);
     cursor: pointer;
+    font-family: var(--headings);
+    font-size: 24px;
   }
 
   button:hover {

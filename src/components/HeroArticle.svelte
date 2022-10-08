@@ -17,12 +17,12 @@
     />
     <div id="content">
       <div>
-        <div style="margin-bottom: 20px">
+        <div style="margin-bottom: 10px">
           <ArticleDate date={publishDate} />
         </div>
-        <Category {category} />
+        <div class="category"><Category {category} /></div>
       </div>
-      <h3>{headline}</h3>
+      <h2>{headline}</h2>
       <p>{description}</p>
       <MinsToRead />
     </div>
@@ -45,9 +45,14 @@
   }
   p {
     font-family: "light", serif;
+    font-size: 30px;
+    padding: 0 30px;
+  }
+  h2 {
+    font-size: 64px;
   }
   #content {
-    padding: 0 30px;
+    padding: 0 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

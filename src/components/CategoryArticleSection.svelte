@@ -45,6 +45,6 @@
   .category-selectors {
     padding: 60px 0;
     display: grid;
-    grid-column-gap: 10px;
+    grid-column-gap: 30px;
   }
 </style>

@@ -16,4 +16,39 @@
     align-items: center;
     border-top: 1px solid var(--black);
   }
+
+  p {
+    font-family: var(--light);
+    max-width: 260px;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+  }
+
+  input {
+    font-family: var(--headings);
+    font-size: 24px;
+    padding: 20px;
+    width: 400px;
+  }
+
+  button {
+    margin-left: 30px;
+    display: inline-block;
+    border: 1px solid var(--black);
+    padding: 20px 80px;
+    background-color: var(--white);
+    cursor: pointer;
+    font-family: var(--headings);
+    font-size: 24px;
+  }
+
+  button:hover {
+    background-color: var(--black);
+    color: var(--white);
+  }
 </style>

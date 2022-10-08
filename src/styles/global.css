@@ -29,14 +29,19 @@
 html {
 	--black: #000000;
 	--white: #FAFAFA;
+
+	--headings: "Headings", serif;
+	--regular: "Regular", serif;
+	--bold: "Bold", serif;
+	--light: "Light", serif;
 }
 
 body {
 	background-color: var(--white);
-	font-family: "Regular", serif;
+	font-family: var(--regular);
 	margin: 0;
 	padding: 30px;
-	font-size: max(16px, 1.8vw)
+	font-size: 16px
 }
 h1,
 h2,
@@ -44,36 +49,36 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Headings", serif;
+	font-family: var(--headings);
 	color: var(--black);
 	font-weight: 400;
 	margin: 0;
 }
 h1 {
-	font-size: max(32px, 7vw)
+	font-size: 78px
 }
 h2 {
-	font-size: max(26px, 5vw)
+	font-size: 54px
 }
 h3 {
-	font-size: max(20px, 3.5vw)
+	font-size: 36px
 }
 h4 {
-	font-size: max(18px, 2vw)
+	font-size: 18px
 }
 strong,
 b {
-	font-family: "Bold", serif;
+	font-family: var(--bold);
 	font-weight: 400;
 	color: var(--black);
 }
 a {
-	font-family: "Regular", serif;
+	font-family: var(--regular);
 	color: var(--black);
 	text-decoration: underline;
 }
 button {
-	font-family: "Regular", serif;
+	font-family: var(--regular);
 	color: var(--black);
 }
 img {
