@@ -1,11 +1,9 @@
 <script lang="ts">
-  import ArticleContent from "../components/ArticleContent.svelte";
+  import ArticleBody from "../components/ArticleBody.svelte";
   import ArticleHeader from "../components/ArticleHeader.svelte";
   import type { Article } from "../types/types";
 
   export let article: Article;
-  export let assets: Assets;
-  export let quotes: Quotes;
 
   const {
     headline,
@@ -20,5 +18,5 @@
 
 <div>
   <ArticleHeader {headline} {publishDate} {category} {heroImage} />
-  <ArticleContent {content} {assets} {introParagraph} {quotes} />
+  <ArticleBody {content} {introParagraph} />
 </div>

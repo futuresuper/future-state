@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type { Category } from "../types/types";
+  import type { Category, HeroImage } from "../types/types";
   import ArticleDate from "./ArticleDate.svelte";
   import CategoryPill from "./CategoryPill.svelte";
 
   export let publishDate: Date;
   export let headline: string;
   export let category: Category;
-  export let heroImage: string;
+  export let heroImage: HeroImage;
 </script>
 
 <div class="article-header">
