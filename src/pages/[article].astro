@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { articles, assets } from "../data/content.json";
+import { articles, assets, quotes } from "../data/content.json";
 import ArticlePage from "../layouts/ArticlePage.svelte";
 import type { Article } from "../types/types";
 
@@ -20,5 +20,5 @@ const article = Astro.props as Article;
   title={"Future State | " + article.headline}
   description={article.description}
 >
-  <ArticlePage article={article} assets={assets} />
+  <ArticlePage article={article} assets={assets} quotes={quotes} />
 </BaseLayout>

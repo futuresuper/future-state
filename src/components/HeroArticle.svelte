@@ -13,7 +13,7 @@
 <a href="/{slug}">
   <article>
     <div
-      style="width: 100%; height: 100%; background-image: url({heroImage}); background-size: cover; background-position: center"
+      style="width: 100%; height: 100%; background-image: url({heroImage.href}); background-size: cover; background-position: center"
     />
     <div id="content">
       <div>

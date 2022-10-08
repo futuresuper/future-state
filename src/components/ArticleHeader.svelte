@@ -10,7 +10,7 @@
 </script>
 
 <div class="article-header">
-  <div class="background" style="background-image: url({heroImage})" />
+  <div class="background" style="background-image: url({heroImage.href})" />
   <div class="foreground">
     <div style="margin-bottom: 10px">
       <ArticleDate date={publishDate} white />

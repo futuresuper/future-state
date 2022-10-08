@@ -6,10 +6,10 @@ import Footer from "../components/Footer.svelte";
 export interface Props {
   title: string;
   description: string;
-  hideLogo: boolean;
+  hideLogo?: boolean;
 }
 
-const { title, description, hideLogo } = Astro.props;
+const { title, description, hideLogo = false } = Astro.props;
 ---
 
 <!DOCTYPE html>

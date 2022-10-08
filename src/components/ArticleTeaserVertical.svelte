@@ -19,7 +19,7 @@
       <div style="margin-bottom: 30px">
         <Category {category} />
       </div>
-      <img src={heroImage} alt={headline} />
+      <img src={heroImage.href} alt={headline} />
       <h3>{headline}</h3>
       <p>{description}</p>
     </div>

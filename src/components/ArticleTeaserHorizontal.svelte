@@ -11,7 +11,7 @@
 
 <a href="/{slug}">
   <article>
-    <img src={heroImage} alt={headline} />
+    <img src={heroImage.href} alt={headline} />
     <h3>{headline}</h3>
     <div class="category">
       <Category {category} />

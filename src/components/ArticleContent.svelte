@@ -1,24 +1,33 @@
 <script lang="ts">
-  import type { Assets } from "../types/types";
+  import type { Assets, Quotes } from "../types/types";
+  import MixedTypographyParagraph from "./MixedTypographyParagraph.svelte";
   import TextContent from "./TextContent.svelte";
 
   export let content: any[];
+  export let introParagraph: string | undefined;
   export let assets: Assets;
+  export let quotes: Quotes;
 
-  // console.log(assets[content[14].data.target.sys.id]);
+  // NOTES FOR NEXT TIME
+  /*
+    Disalow adding asset in CMS and instead link to Quote or Image entry.
+
+    Have option in each for 'Full width'.
+
+    Use the Title in asset for ALT tag
+  */
 </script>
 
 <div class="grid">
   <div />
   <article>
+    {#if introParagraph}
+      <h3>{introParagraph}</h3>
+    {/if}
     {#each content as item}
       {#if item.nodeType === "paragraph"}
         <p>
-          {#each item.content as textContent}
-            <TextContent {textContent}>
-              {textContent.value}
-            </TextContent>
-          {/each}
+          <MixedTypographyParagraph array={item.content} />
         </p>
       {/if}
       {#if item.nodeType === "heading-2"}
@@ -38,11 +47,7 @@
         <ul>
           {#each item.content as listItem}
             <li>
-              {#each listItem.content[0].content as textContent}
-                <TextContent {textContent}>
-                  {textContent.value}
-                </TextContent>
-              {/each}
+              <MixedTypographyParagraph array={listItem.content[0].content} />
             </li>
           {/each}
         </ul>
@@ -51,26 +56,28 @@
         <ol>
           {#each item.content as listItem}
             <li>
-              {#each listItem.content[0].content as textContent}
-                <TextContent {textContent}>
-                  {textContent.value}
-                </TextContent>
-              {/each}
+              <MixedTypographyParagraph array={listItem.content[0].content} />
             </li>
           {/each}
         </ol>
       {/if}
       {#if item.nodeType === "blockquote"}
         <blockquote>
-          {#each item.content[0].content as textContent}
-            <TextContent {textContent}>
-              {textContent.value}
-            </TextContent>
-          {/each}
+          <MixedTypographyParagraph array={item.content[0].content} />
         </blockquote>
       {/if}
       {#if item.nodeType === "embedded-asset-block"}
         <img src={assets[item.data.target.sys.id]} alt="" />
+      {/if}
+      {#if item.nodeType === "embedded-entry-block"}
+        <p>
+          <MixedTypographyParagraph
+            array={quotes[item.data.target.sys.id].quoteText[0].content}
+          />
+        </p>
+        <p>
+          {quotes[item.data.target.sys.id].author}
+        </p>
       {/if}
     {/each}
   </article>

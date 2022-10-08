@@ -8,6 +8,11 @@ export type Author = {
   slug: string;
 };
 
+export type HeroImage = {
+  altText: string;
+  href: string;
+};
+
 export type Article = {
   headline: string;
   slug: string;
@@ -16,11 +21,14 @@ export type Article = {
   tags: string[];
   category: Category;
   authors: Author[];
-  heroImage: string;
+  heroImage: HeroImage;
+  introParagraph?: string;
   content: any;
 };
 
 export type Assets = any;
+
+export type Quotes = any;
 
 export type Content = {
   articles: Article[];

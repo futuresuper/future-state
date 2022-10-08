@@ -5,12 +5,20 @@
 
   export let article: Article;
   export let assets: Assets;
+  export let quotes: Quotes;
 
-  const { headline, description, publishDate, category, heroImage, content } =
-    article;
+  const {
+    headline,
+    description,
+    publishDate,
+    category,
+    heroImage,
+    content,
+    introParagraph,
+  } = article;
 </script>
 
 <div>
   <ArticleHeader {headline} {publishDate} {category} {heroImage} />
-  <ArticleContent {content} {assets} />
+  <ArticleContent {content} {assets} {introParagraph} {quotes} />
 </div>
