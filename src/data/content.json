@@ -6,7 +6,7 @@
       "description": "Climate change etc things blah blah",
       "publishDate": "2022-09-23",
       "createdAt": "2022-10-01T02:32:52.522Z",
-      "updatedAt": "2022-10-08T10:03:38.724Z",
+      "updatedAt": "2022-10-08T10:57:47.338Z",
       "category": { "name": "Climate Change", "slug": "climate-change" },
       "tags": ["bee", "climatechange"],
       "authors": [
@@ -297,19 +297,102 @@
           "nodeType": "paragraph",
           "data": {},
           "content": [
+            { "nodeType": "text", "value": "Quote:", "marks": [], "data": {} }
+          ]
+        },
+        {
+          "nodeType": "embedded-entry-block",
+          "data": {
+            "target": {
+              "sys": {
+                "id": "1sPst2VnJlMOUMs4GMiBkf",
+                "type": "Link",
+                "linkType": "Entry"
+              }
+            }
+          },
+          "content": []
+        },
+        {
+          "nodeType": "paragraph",
+          "data": {},
+          "content": [
+            { "nodeType": "text", "value": "Image:", "marks": [], "data": {} }
+          ]
+        },
+        {
+          "nodeType": "embedded-entry-block",
+          "data": {
+            "target": {
+              "sys": {
+                "id": "2cc20TUmjy6Vvo8gUUEwc0",
+                "type": "Link",
+                "linkType": "Entry"
+              }
+            }
+          },
+          "content": []
+        },
+        {
+          "nodeType": "paragraph",
+          "data": {},
+          "content": [
             {
               "nodeType": "text",
-              "value": "An image above",
+              "value": "A full width quote: ",
               "marks": [],
               "data": {}
             }
           ]
         },
         {
+          "nodeType": "embedded-entry-block",
+          "data": {
+            "target": {
+              "sys": {
+                "id": "1CZFIOt7LW2Y4iRWAg88RS",
+                "type": "Link",
+                "linkType": "Entry"
+              }
+            }
+          },
+          "content": []
+        },
+        {
           "nodeType": "paragraph",
           "data": {},
           "content": [
-            { "nodeType": "text", "value": "", "marks": [], "data": {} }
+            {
+              "nodeType": "text",
+              "value": "A full width image:",
+              "marks": [],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "nodeType": "embedded-entry-block",
+          "data": {
+            "target": {
+              "sys": {
+                "id": "5gEM1oeJ3lqFzhQwAizhF",
+                "type": "Link",
+                "linkType": "Entry"
+              }
+            }
+          },
+          "content": []
+        },
+        {
+          "nodeType": "paragraph",
+          "data": {},
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "that's it.",
+              "marks": [],
+              "data": {}
+            }
           ]
         }
       ]
@@ -537,6 +620,24 @@
     "xS8aVwlFEsYWA1KEW468L": "https://images.ctfassets.net/00iolzsxly63/xS8aVwlFEsYWA1KEW468L/a172bc193bf0a28537734caa01db9e23/Frame_26.png"
   },
   "quotes": {
+    "1CZFIOt7LW2Y4iRWAg88RS": {
+      "quoteText": [
+        {
+          "data": {},
+          "content": [
+            {
+              "data": {},
+              "marks": [],
+              "value": "Future Super rocks",
+              "nodeType": "text"
+            }
+          ],
+          "nodeType": "paragraph"
+        }
+      ],
+      "author": "Simon Sheikh",
+      "fullWidth": true
+    },
     "1sPst2VnJlMOUMs4GMiBkf": {
       "quoteText": [
         {
@@ -564,8 +665,20 @@
           "nodeType": "paragraph"
         }
       ],
-      "author": "Bill Gates"
+      "author": "Bill Gates",
+      "fullWidth": false
     }
   },
-  "images": {}
+  "images": {
+    "5gEM1oeJ3lqFzhQwAizhF": {
+      "altText": "Blue flower",
+      "href": "https://images.ctfassets.net/00iolzsxly63/6TrI2RgQy6N1X90ahj3fpj/8a684cb223eebaef0eaac51b57ac824a/Frame_27.png",
+      "fullWidth": true
+    },
+    "2cc20TUmjy6Vvo8gUUEwc0": {
+      "altText": "A bee",
+      "href": "https://images.ctfassets.net/00iolzsxly63/7kKmFBhv01yAaFHraLiMbJ/95147af36f1ce5a5bc084c759967795d/Frame_29.png",
+      "fullWidth": false
+    }
+  }
 }
