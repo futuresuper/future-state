@@ -18,5 +18,7 @@
 
 <div>
   <ArticleHeader {headline} {publishDate} {category} {heroImage} />
-  <ArticleBody {content} {introParagraph} />
+  <ArticleBody {content} {introParagraph}>
+    <slot />
+  </ArticleBody>
 </div>

@@ -13,8 +13,10 @@
 <a href="/{slug}">
   <article>
     <div
+      class="desktop"
       style="width: 100%; height: 100%; background-image: url({heroImage.href}); background-size: cover; background-position: center"
     />
+    <img class="mobile" src={heroImage.href} alt={heroImage.altText} />
     <div id="content">
       <div>
         <div style="margin-bottom: 10px">
@@ -30,6 +32,9 @@
 </a>
 
 <style>
+  .mobile {
+    display: none;
+  }
   a {
     text-decoration: none;
   }
@@ -49,12 +54,27 @@
     padding: 0 30px;
   }
   h2 {
-    font-size: 64px;
+    font-size: 50px;
   }
   #content {
     padding: 0 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  @media (max-width: 1200px) {
+    h2 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    h2 {
+      font-size: 30px;
+    }
   }
 </style>

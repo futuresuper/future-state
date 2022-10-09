@@ -9,4 +9,10 @@
     font-size: 18px;
     margin: 0;
   }
+
+  @media (max-width: 1000px) {
+    h4 {
+      font-size: 15px;
+    }
+  }
 </style>

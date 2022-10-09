@@ -15,7 +15,9 @@
     <div style="margin-bottom: 10px">
       <ArticleDate date={publishDate} white />
     </div>
-    <CategoryPill {category} white />
+    <div class="category">
+      <CategoryPill {category} white />
+    </div>
     <h1>{headline}</h1>
   </div>
 </div>
@@ -52,6 +54,28 @@
     color: var(--white);
     max-width: 800px;
     text-align: center;
-    margin: 30px;
+    margin: 30px 30px 0 30px;
+  }
+
+  @media (max-width: 840px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 580px) {
+    h1 {
+      font-size: 30px;
+      margin-top: 20px;
+    }
+    .category {
+      display: none;
+    }
+  }
+
+  @media (max-width: 460px) {
+    h1 {
+      font-size: 24px;
+    }
   }
 </style>

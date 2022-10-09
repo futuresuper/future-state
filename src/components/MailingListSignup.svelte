@@ -8,6 +8,10 @@
 </div>
 
 <style>
+  h2 {
+    text-align: center;
+  }
+
   div {
     padding: 100px 0;
     display: flex;
@@ -50,5 +54,23 @@
   button:hover {
     background-color: var(--black);
     color: var(--white);
+  }
+
+  @media (max-width: 840px) {
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      width: calc(100% - 42px);
+      text-align: center;
+    }
+
+    button {
+      margin: 10px 0 0 0;
+      width: 100%;
+    }
   }
 </style>

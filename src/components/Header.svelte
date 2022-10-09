@@ -1,23 +1,28 @@
 <script>
+  import { format } from "date-fns";
+
   export let hideLogo = false;
 </script>
 
 <header>
-  <h4>Today&nbsp;&nbsp;|&nbsp;&nbsp;12.08.2022</h4>
-  <div class="logo">
-    <a href="/">
-      {#if !hideLogo}
+  <h4>Today&nbsp;&nbsp;|&nbsp;&nbsp;{format(new Date(), "dd.MM.yyyy")}</h4>
+  {#if !hideLogo}
+    <div class="logo">
+      <a href="/">
         <img id="logo" src="/futurestate-logo.svg" alt="Future State logo" />
-      {/if}
-    </a>
-  </div>
-  <h4 style="text-align: right">
+      </a>
+    </div>
+  {:else}
+    <div class="hide-mobile" />
+  {/if}
+  <h4 style="text-align: right;">
     Global Temperature&nbsp;&nbsp;|&nbsp;&nbsp;+1.01˚C Since 1880
   </h4>
 </header>
 
 <style>
   header {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border-bottom: 1px solid var(--black);
@@ -31,5 +36,30 @@
   .logo {
     width: 200px;
     justify-self: center;
+  }
+
+  @media (max-width: 700px) {
+    header {
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .hide-mobile {
+      display: none;
+    }
+
+    .logo {
+      padding-top: 20px;
+      justify-self: center;
+      grid-row: 2;
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 460px) {
+    h4 {
+      font-size: 13px;
+    }
   }
 </style>

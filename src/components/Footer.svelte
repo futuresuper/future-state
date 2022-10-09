@@ -1,5 +1,10 @@
-<script></script>
+<script>
+  import MailingListSignup from "./MailingListSignup.svelte";
+</script>
 
+<section>
+  <MailingListSignup />
+</section>
 <footer>
   <div class="logo-row">
     <div class="logo">
@@ -51,5 +56,25 @@
     font-size: 12px;
     margin-bottom: 0;
     max-width: 320px;
+  }
+
+  @media (max-width: 840px) {
+    .bottom-row {
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+    }
+
+    p {
+      max-width: 100%;
+    }
+
+    img {
+      margin-top: 20px;
+    }
+
+    .logo-row {
+      padding-bottom: 60px;
+    }
   }
 </style>

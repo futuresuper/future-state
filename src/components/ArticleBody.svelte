@@ -1,13 +1,15 @@
 <script lang="ts">
   import ArticleContent from "./ArticleContent.svelte";
+  import CopyShareButtons from "./CopyShareButtons.svelte";
 
   export let content: any[];
   export let introParagraph: string | undefined;
 </script>
 
 <article>
-  <div>share button 3</div>
-
+  <div class="hide-on-mobile">
+    <slot />
+  </div>
   {#if introParagraph}
     <h3>{introParagraph}</h3>
   {/if}
@@ -20,6 +22,7 @@
   h3 {
     font-family: var(--light), serif;
     margin-bottom: 40px;
+    text-align: center;
   }
 
   article {
@@ -29,7 +32,20 @@
     grid-column-gap: 30px;
   }
 
-  h3 {
-    text-align: center;
+  @media (max-width: 900px) {
+    .hide-on-mobile {
+      display: none;
+    }
+
+    article {
+      padding: 60px 0;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-column-gap: 30px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
   }
 </style>

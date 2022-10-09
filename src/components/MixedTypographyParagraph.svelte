@@ -3,17 +3,16 @@
 
   export let array;
 
-  console.log(array);
+  console.log(array[1]);
 </script>
 
 {#each array as textContent}
   {#if textContent.nodeType === "hyperlink"}
     <a href={textContent.data.uri}>
       {#each textContent.content as nestedTextContent}
-        <!-- <TextContent {nestedTextContent}>
+        <TextContent textContent={nestedTextContent}>
           {nestedTextContent.value}
-        </TextContent> -->
-        hello
+        </TextContent>
       {/each}
     </a>
   {:else}

@@ -119,4 +119,19 @@
     margin-top: 40px;
     margin-bottom: 10px;
   }
+
+  @media (max-width: 900px) {
+    .contained {
+      grid-column: 1;
+    }
+
+    .full-width,
+    .hr {
+      grid-column: 1;
+    }
+
+    h3.quote {
+      font-size: 24px;
+    }
+  }
 </style>

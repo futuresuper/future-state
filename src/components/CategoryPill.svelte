@@ -21,4 +21,10 @@
     font-size: 24px;
     line-height: 150%;
   }
+
+  @media (max-width: 1000px) {
+    div {
+      font-size: 16px;
+    }
+  }
 </style>
