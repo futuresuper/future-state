@@ -6,7 +6,7 @@
 </script>
 
 <article>
-  <div>share button</div>
+  <div>share button 3</div>
 
   {#if introParagraph}
     <h3>{introParagraph}</h3>
@@ -17,6 +17,11 @@
 </article>
 
 <style>
+  h3 {
+    font-family: var(--light), serif;
+    margin-bottom: 40px;
+  }
+
   article {
     padding: 60px 0;
     display: grid;

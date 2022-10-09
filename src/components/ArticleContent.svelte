@@ -6,25 +6,25 @@
 </script>
 
 {#if item.nodeType === "paragraph"}
-  <p>
+  <p class="contained">
     <MixedTypographyParagraph array={item.content} />
   </p>
 {/if}
 {#if item.nodeType === "heading-2"}
-  <h2>
+  <h2 class="contained">
     {item.content[0].value}
   </h2>
 {/if}
 {#if item.nodeType === "heading-3"}
-  <h3>
+  <h3 class="contained">
     {item.content[0].value}
   </h3>
 {/if}
 {#if item.nodeType === "hr"}
-  <hr />
+  <div class="hr" />
 {/if}
 {#if item.nodeType === "unordered-list"}
-  <ul>
+  <ul class="contained">
     {#each item.content as listItem}
       <li>
         <MixedTypographyParagraph array={listItem.content[0].content} />
@@ -33,7 +33,7 @@
   </ul>
 {/if}
 {#if item.nodeType === "ordered-list"}
-  <ol>
+  <ol class="contained">
     {#each item.content as listItem}
       <li>
         <MixedTypographyParagraph array={listItem.content[0].content} />
@@ -44,18 +44,20 @@
 {#if item.nodeType === "embedded-entry-block"}
   {#if quotes[item.data.target.sys.id]}
     <div
-      class={quotes[item.data.target.sys.id].fullWidth
-        ? "fullWidth"
-        : "contained"}
+      class="quote-container {quotes[item.data.target.sys.id].fullWidth
+        ? 'full-width'
+        : 'contained'}"
     >
-      <p>
+      <h3 class="quote">
         <MixedTypographyParagraph
           array={quotes[item.data.target.sys.id].quoteText[0].content}
         />
-      </p>
-      <p>
-        {quotes[item.data.target.sys.id].author}
-      </p>
+      </h3>
+      <div class="author-container">
+        <p class="author">
+          {quotes[item.data.target.sys.id].author}
+        </p>
+      </div>
     </div>
   {/if}
   {#if images[item.data.target.sys.id]}
@@ -70,22 +72,51 @@
 {/if}
 
 <style>
-  p,
-  h2,
-  h3,
-  ol,
-  ul,
   .contained {
     grid-column: 2;
   }
 
-  hr,
-  .full-width {
-    grid-column: 1 / span 3;
+  .full-width,
+  .hr {
+    grid-column: 1 / 4;
+  }
+
+  .hr {
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+    margin: 30px 0;
+  }
+
+  .quote-container {
+    padding: 30px 0;
+  }
+
+  h3.quote {
+    font-family: var(--light);
+    font-style: italic;
+  }
+
+  .author-container {
+    display: flex;
+    justify-content: center;
+  }
+  .author {
+    padding: 6px 20px 3px 20px;
+    border: 1px solid var(--black);
+    border-radius: 100px;
+    display: inline-block;
+  }
+
+  img {
+    width: 100%;
+    margin: 30px 0;
   }
 
   h2,
   h3 {
     text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
   }
 </style>
