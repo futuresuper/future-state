@@ -1,10 +1,5 @@
 <script lang="ts">
-  import ArticleTeaserGrid from "../components/ArticleTeaserGrid.svelte";
-  import ArticleTeaserVertical from "../components/ArticleTeaserVertical.svelte";
-  import HeroArticle from "../components/HeroArticle.svelte";
-  import type { Article } from "../types/types";
-
-  export let articles: Article[];
+  import MailingListSignup from "../components/MailingListSignup.svelte";
 </script>
 
 <div>
@@ -14,30 +9,43 @@
       Reporting on climate change and inequality by following the money
     </h3>
   </div>
-  <div class="desktop">
-    <HeroArticle article={articles[1]} />
-    <ArticleTeaserGrid>
-      {#each articles.slice(0, 3) as article}
-        <ArticleTeaserVertical {article} />
-      {/each}
-    </ArticleTeaserGrid>
-    <!-- category selector: inserted via a slot as it's the only component that requires hydration -->
-    <slot />
-  </div>
-  <div class="mobile">
-    <ArticleTeaserGrid>
-      {#each articles as article}
-        <ArticleTeaserVertical {article} />
-      {/each}
-    </ArticleTeaserGrid>
-  </div>
+  <MailingListSignup />
+  <section>
+    <h2>Quiz Answers</h2>
+    <p>
+      1. Gina Rinehart<br />
+      2. Greenhouse Gases<br />
+      3. 30%<br />
+      4. Al Gore<br />
+      5. Paul Keating<br />
+      6. ICIJ - International Consortium of Investigative Journalists<br />
+      7. Norway<br />
+      8. 46,000 years<br />
+      9. Carbon Dating<br />
+      10. 69%<br />
+      11. Standing Rock<br />
+      12. Coking coal<br />
+      13. $3.3 Trillion or $3,300,000,000,000<br />
+      14. BP (British Petroleum)<br />
+      15. Patagonia<br />
+      16. Taylor Swift<br />
+      17. 14.1%<br />
+      18. Surfers For Climate<br />
+      19. Dharawal and Dharug<br />
+      20. Tonnes of Carbon Dioxide equivalent<br />
+    </p>
+  </section>
+  <section>
+    <h2>Crossword Answers</h2>
+    <img
+      class="crossword"
+      src="/crossword-answers.png"
+      alt="Future State Crossword Answers"
+    />
+  </section>
 </div>
 
 <style>
-  .mobile {
-    display: none;
-  }
-
   #logo {
     padding: 30px 0;
   }
@@ -49,19 +57,27 @@
 
   .masthead {
     padding: 30px 0 40px 0;
-    border-bottom: 1px solid var(--black);
+    /* border-bottom: 1px solid var(--black); */
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  @media (max-width: 840px) {
-    .desktop {
-      display: none;
-    }
-    .mobile {
-      display: block;
-    }
+  img.crossword {
+    max-width: 535px;
+    margin: 30px 0;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  h2,
+  p {
+    text-align: center;
   }
 
   @media (max-width: 640px) {

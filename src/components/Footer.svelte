@@ -2,9 +2,6 @@
   import MailingListSignup from "./MailingListSignup.svelte";
 </script>
 
-<section>
-  <MailingListSignup />
-</section>
 <footer>
   <div class="logo-row">
     <div class="logo">
@@ -13,10 +10,8 @@
   </div>
   <div class="bottom-row">
     <div>
-      <img
-        src="/aboriginal-flag.svg"
-        alt="Aboriginal and Torres Strait Islander flags"
-      />
+      <img src="/aboriginal-flag.svg" alt="Aboriginal flag" />
+      <img src="/tsi-flag.png" alt="Torres Strait Islander flag" />
       <p>
         Future State acknowledges the Traditional Custodians of the lands on
         which we operate and pay our respects to Elders, past, present and
