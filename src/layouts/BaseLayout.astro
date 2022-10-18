@@ -18,7 +18,7 @@ const { title, description, hideLogo = false } = Astro.props;
     <BaseHead title={title} description={description} />
   </head>
   <body>
-    <Header hideLogo={hideLogo} />
+    <Header hideLogo={hideLogo} client:load />
     <main>
       <slot />
     </main>
