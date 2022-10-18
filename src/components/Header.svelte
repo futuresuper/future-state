@@ -2,10 +2,12 @@
   import { format } from "date-fns";
 
   export let hideLogo = false;
+
+  let date = format(new Date(), "dd.MM.yyyy");
 </script>
 
 <header>
-  <h4>Today&nbsp;&nbsp;|&nbsp;&nbsp;{format(new Date(), "dd.MM.yyyy")}</h4>
+  <h4>Today&nbsp;&nbsp;|&nbsp;&nbsp;{date}</h4>
   {#if !hideLogo}
     <div class="logo">
       <a href="/">
