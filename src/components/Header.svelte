@@ -1,9 +1,14 @@
 <script>
+  import { onMount } from "svelte";
   import { format } from "date-fns";
 
   export let hideLogo = false;
 
-  let date = format(new Date(), "dd.MM.yyyy");
+  let date;
+
+  onMount(async () => {
+    let date = format(new Date(), "dd.MM.yyyy");
+  });
 </script>
 
 <header>
