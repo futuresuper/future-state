@@ -1,13 +1,22 @@
 <script>
-  import { onMount } from "svelte";
   import { format } from "date-fns";
+  import { onMount } from "svelte";
 
   export let hideLogo = false;
 
   let date;
 
+  const clientSide = !import.meta.env.SSR;
+
+  console.log("hello");
+  if (clientSide) {
+    console.log("CLIENT SIDE");
+  }
+
   onMount(async () => {
-    let date = format(new Date(), "dd.MM.yyyy");
+    console.log("MOUNTED");
+    date = format(new Date(), "dd.MM.yyyy");
+    console.log("date", date);
   });
 </script>
 
